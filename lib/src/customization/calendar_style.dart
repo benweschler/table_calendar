@@ -145,6 +145,10 @@ class CalendarStyle {
   /// Border for the internal `Table` widget.
   final TableBorder tableBorder;
 
+  /// The duration of animations performed on calendar cell decorations
+  /// (e.g. animating between showing and hiding the selectedDecoration).
+  final Duration cellAnimationDuration;
+
   /// Creates a `CalendarStyle` used by `TableCalendar` widget.
   const CalendarStyle({
     this.isTodayHighlighted = true,
@@ -218,6 +222,7 @@ class CalendarStyle {
     this.defaultDecoration = const BoxDecoration(shape: BoxShape.circle),
     this.rowDecoration = const BoxDecoration(),
     this.tableBorder = const TableBorder(),
+    this.cellAnimationDuration = const Duration(milliseconds: 250),
   });
 }
 
